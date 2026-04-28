@@ -129,6 +129,41 @@ if (qrFrame && qrModal) {
   });
 }
 
+/* ── WHATSAPP INTERACTIVE CHAT ── */
+const waBubble = document.getElementById('whatsappBubble');
+const waChatWindow = document.getElementById('waChatWindow');
+const waInput = document.getElementById('waInput');
+const waSendBtn = document.getElementById('waSendBtn');
+
+if (waBubble && waChatWindow) {
+  waBubble.addEventListener('click', (e) => {
+    e.stopPropagation();
+    waChatWindow.classList.toggle('open');
+  });
+
+  const sendWhatsApp = () => {
+    const msg = waInput.value.trim();
+    if (msg) {
+      const url = `https://wa.me/916006065554?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+      waInput.value = '';
+      waChatWindow.classList.remove('open');
+    }
+  };
+
+  waSendBtn.addEventListener('click', sendWhatsApp);
+  waInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendWhatsApp();
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!waChatWindow.contains(e.target) && !waBubble.contains(e.target)) {
+      waChatWindow.classList.remove('open');
+    }
+  });
+}
+
 /* ── YEAR ── */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();

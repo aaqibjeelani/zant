@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" href="assets/img/logo.png">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -118,8 +118,8 @@
         <div class="hero-glow"></div>
         <div class="container hero-content">
             <div class="hero-badge">
-                <!-- <span class="hero-badge-dot"></span> -->
-                <!-- Registration No: GR 4852920 -->
+                <span class="hero-badge-dot"></span>
+                Registration No: GR 4852920
             </div>
             <h1 class="hero-title">
                 <span class="line1">Your Contribution</span>
@@ -370,6 +370,14 @@
                     </div>
 
                     <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <span class="contact-card-label">Contact Number</span>
+                            <p class="contact-card-val"><a href="tel:+916006065554">+91 60060 65554</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
                         <div class="contact-icon">📱</div>
                         <div>
                             <span class="contact-card-label">Social Media</span>
@@ -409,6 +417,8 @@
                     <img src="assets/img/logo.png" alt="ZANT Footer Logo">
                     <h4 class="footer-brand-name">Zu Al Noorain Trust</h4>
                     <p class="footer-brand-reg">Reg No: GR 4852920</p>
+                    <p class="footer-brand-desc" style="margin-bottom: 8px;">Contact: <a href="tel:+916006065554"
+                            style="color: var(--gold); text-decoration: none; font-weight: 600;">+91 60060 65554</a></p>
                     <p class="footer-brand-desc">A committed NGO in Kashmir dedicated to social welfare and Islamic
                         charity. Helping those who need it most.</p>
                 </div>
@@ -450,12 +460,42 @@
         </div>
     </div>
 
+    <!-- WhatsApp Bubble & Chat Window -->
+    <div class="wa-chat-window" id="waChatWindow">
+        <div class="wa-header">
+            <img src="assets/img/logo.png" alt="ZANT">
+            <div class="wa-header-info">
+                <h5>Zu Al Noorain Trust</h5>
+                <span>Typically replies in a few hours</span>
+            </div>
+        </div>
+        <div class="wa-body">
+            <div class="wa-msg-bubble">
+                Assalamu Alaikum! How can we help you today?
+            </div>
+        </div>
+        <div class="wa-footer">
+            <input type="text" class="wa-input" id="waInput" placeholder="Type a message...">
+            <button class="wa-send-btn" id="waSendBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </div>
+    </div>
+
+    <button class="whatsapp-bubble" id="whatsappBubble" title="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.478 2.011 7.788l-2.011 7.212 7.378-1.936c2.204 1.204 4.729 1.936 7.422 1.936 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.454 0-4.751-0.662-6.726-1.815l-0.482-0.281-4.385 1.15 1.196-4.288-0.309-0.49c-1.246-1.979-1.96-4.321-1.96-6.83 0-7.363 5.97-13.333 13.333-13.333s13.333 5.97 13.333 13.333c0 7.363-5.97 13.333-13.333 13.333zM22.115 18.96c-0.334-0.167-1.977-0.975-2.284-1.087s-0.531-0.167-0.754 0.167c-0.223 0.334-0.865 1.087-1.06 1.31s-0.39 0.251-0.724 0.084c-0.334-0.167-1.411-0.52-2.687-1.657-0.993-0.886-1.663-1.98-1.859-2.314s-0.021-0.514 0.147-0.68c0.151-0.149 0.334-0.39 0.501-0.585s0.223-0.334 0.334-0.557c0.112-0.223 0.056-0.418-0.028-0.585s-0.754-1.813-1.033-2.482c-0.272-0.652-0.546-0.564-0.754-0.575l-0.641-0.012c-0.223 0-0.585 0.084-0.892 0.418s-1.171 1.144-1.171 2.791c0 1.647 1.198 3.236 1.365 3.459s2.358 3.599 5.711 5.051c0.798 0.345 1.42 0.551 1.905 0.706 0.801 0.254 1.53 0.218 2.106 0.132 0.642-0.096 1.977-0.808 2.256-1.589s0.279-1.449 0.195-1.589c-0.084-0.14-0.307-0.223-0.641-0.39z">
+            </path>
+        </svg>
+    </button>
+
     <!-- UI Elements -->
     <button id="scrollTop" title="Go to top">↑</button>
     <div class="toast" id="toast">UPI ID Copied to Clipboard!</div>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=1.0.2"></script>
 </body>
 
 </html>
