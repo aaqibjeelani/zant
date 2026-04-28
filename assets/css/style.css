@@ -79,7 +79,16 @@ body {
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
-.mobile-menu { display: none; flex-direction: column; gap: 4px; padding: 16px 24px; background: rgba(10,15,13,.97); border-top: 1px solid rgba(201,168,76,.15); }
+.mobile-menu { 
+  display: none; 
+  flex-direction: column; 
+  gap: 4px; 
+  padding: 16px 24px; 
+  background: rgba(10,15,13,.98); 
+  border-top: 1px solid rgba(201,168,76,.15); 
+  max-height: calc(100vh - 80px); 
+  overflow-y: auto; 
+}
 .mobile-menu a { color: var(--text); text-decoration: none; font-size: 1rem; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
 .mobile-menu.open { display: flex; }
 
