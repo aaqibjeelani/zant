@@ -3,55 +3,64 @@ const scrollTopBtn = document.getElementById('scrollTop');
 const preloader = document.getElementById('preloader');
 
 /* ── PRELOADER ── */
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    preloader.classList.add('fade-out');
-  }, 1000); // Small delay to enjoy the logo pulse
-});
+if (preloader) {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+    }, 1000);
+  });
+}
 
+/* ── NAVBAR & SCROLL TOP ── */
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
-    navbar.classList.add('scrolled');
-    scrollTopBtn.classList.add('show');
+    if (navbar) navbar.classList.add('scrolled');
+    if (scrollTopBtn) scrollTopBtn.classList.add('show');
   } else {
-    navbar.classList.remove('scrolled');
-    scrollTopBtn.classList.remove('show');
+    if (navbar) navbar.classList.remove('scrolled');
+    if (scrollTopBtn) scrollTopBtn.classList.remove('show');
   }
 });
 
-scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
 
 /* ── HAMBURGER ── */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
-
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
   });
-});
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+}
 
 /* ── REVEAL ON SCROLL ── */
 const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), entry.target.dataset.delay || 0);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+if (reveals.length > 0) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), entry.target.dataset.delay || 0);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
 
-reveals.forEach((el, i) => {
-  el.dataset.delay = (i % 4) * 120;
-  observer.observe(el);
-});
+  reveals.forEach((el, i) => {
+    el.dataset.delay = (i % 4) * 120;
+    observer.observe(el);
+  });
+}
 
 /* ── COUNTER ANIMATION ── */
 function animateCounter(el, target, duration = 1800) {
@@ -64,23 +73,26 @@ function animateCounter(el, target, duration = 1800) {
   }, 16);
 }
 
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const counters = entry.target.querySelectorAll('[data-count]');
-      counters.forEach(c => animateCounter(c, parseInt(c.dataset.count), 1800));
-      counterObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
+const countersContainer = document.querySelectorAll('.hero-stats, .stats-row');
+if (countersContainer.length > 0) {
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('[data-count]');
+        counters.forEach(c => animateCounter(c, parseInt(c.dataset.count), 1800));
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
 
-document.querySelectorAll('.hero-stats, .stats-row').forEach(el => counterObserver.observe(el));
+  countersContainer.forEach(el => counterObserver.observe(el));
+}
 
 /* ── COPY UPI ID ── */
 const copyBtn = document.getElementById('copyUPI');
 const toast = document.getElementById('toast');
 
-if (copyBtn) {
+if (copyBtn && toast) {
   copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText('JKBMERC00114690@JKB').then(() => {
       toast.classList.add('show');
@@ -97,30 +109,32 @@ if (copyBtn) {
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+if (sections.length > 0 && navLinks.length > 0) {
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
   });
-  navLinks.forEach(link => {
-    link.style.color = link.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
-  });
-});
+}
 
 /* ── QR MODAL ── */
 const qrFrame = document.getElementById('qrFrame');
 const qrModal = document.getElementById('qrModal');
 const closeModal = document.getElementById('closeModal');
 
-if (qrFrame && qrModal) {
+if (qrFrame && qrModal && closeModal) {
   qrFrame.addEventListener('click', () => {
     qrModal.classList.add('open');
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    document.body.style.overflow = 'hidden';
   });
 
   const closeAction = () => {
     qrModal.classList.remove('open');
-    document.body.style.overflow = ''; // Restore scrolling
+    document.body.style.overflow = '';
   };
 
   closeModal.addEventListener('click', closeAction);
@@ -135,7 +149,7 @@ const waChatWindow = document.getElementById('waChatWindow');
 const waInput = document.getElementById('waInput');
 const waSendBtn = document.getElementById('waSendBtn');
 
-if (waBubble && waChatWindow) {
+if (waBubble && waChatWindow && waInput && waSendBtn) {
   waBubble.addEventListener('click', (e) => {
     e.stopPropagation();
     waChatWindow.classList.toggle('open');
@@ -156,7 +170,6 @@ if (waBubble && waChatWindow) {
     if (e.key === 'Enter') sendWhatsApp();
   });
 
-  // Close when clicking outside
   document.addEventListener('click', (e) => {
     if (!waChatWindow.contains(e.target) && !waBubble.contains(e.target)) {
       waChatWindow.classList.remove('open');
