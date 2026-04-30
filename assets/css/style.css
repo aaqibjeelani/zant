@@ -1226,6 +1226,13 @@ body {
   font-weight: 800;
   color: var(--gold);
   border: 2px solid rgba(201, 168, 76, .3);
+  overflow: hidden;
+}
+
+.trustee-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .trustee-num {
