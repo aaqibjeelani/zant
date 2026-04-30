@@ -36,7 +36,8 @@
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1.6">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -120,39 +121,281 @@
     <section id="hero">
         <div class="hero-pattern"></div>
         <div class="hero-glow"></div>
-        <div class="container hero-content">
-            <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                Registration No: GR 4852920
-            </div>
-            <h1 class="hero-title">
-                <span class="line1">Your Contribution</span>
-                <span class="line2">Changes Lives</span>
-                <span class="line3">In Kashmir</span>
-            </h1>
-            <p class="hero-arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
-            <p class="hero-desc">Dedicated to the empowerment of the underprivileged through Zakat, Sadqat, and
-                Khairaat. Join us in our mission to bring hope and relief to the needy.</p>
-            <div class="hero-btns">
-                <a href="#donate" class="btn btn-gold">Make a Donation</a>
-                <a href="#about" class="btn btn-outline">Our Mission</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="hero-stat-num" data-count="200" data-suffix="+">0</span>
-                    <span class="hero-stat-label">Families Supported</span>
+
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Original Hero Content -->
+                <div class="swiper-slide hero-main-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Registration No: GR 4852920
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Your Contribution</span>
+                                <span class="line2">Changes Lives</span>
+                                <span class="line3">In Kashmir</span>
+                            </h1>
+                            <p class="hero-arabic" data-swiper-parallax="-500">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                            <p class="hero-desc" data-swiper-parallax="-600">Dedicated to the empowerment of the
+                                underprivileged through Zakat, Sadqat, and
+                                Khairaat. Join us in our mission to bring hope and relief to the needy.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Make a Donation</a>
+                                <a href="#about" class="btn btn-outline">Our Mission</a>
+                            </div>
+                            <div class="hero-stats" data-swiper-parallax="-800">
+                                <div class="hero-stat">
+                                    <span class="hero-stat-num" data-count="200" data-suffix="+">0</span>
+                                    <span class="hero-stat-label">Families Supported</span>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-num" data-count="500" data-suffix="+">0</span>
+                                    <span class="hero-stat-label">Lives Impacted</span>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-num" data-count="10" data-suffix="+">0</span>
+                                    <span class="hero-stat-label">Active Projects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-num" data-count="500" data-suffix="+">0</span>
-                    <span class="hero-stat-label">Lives Impacted</span>
+
+                <!-- Slide 2: Monthly Assistance -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Our Impact
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Monthly</span>
+                                <span class="line2">Assistance</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Consistent financial aid to help
+                                underprivileged families cover their essential day-to-day living expenses and basic
+                                household needs.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Support a Family</a>
+                                <a href="#services" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-num" data-count="10" data-suffix="+">0</span>
-                    <span class="hero-stat-label">Active Projects</span>
+
+                <!-- Slide 3: Medical Assistant -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Healthcare Aid
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Medical</span>
+                                <span class="line2">Assistant</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Critical support for healthcare costs,
+                                including life-saving surgeries, expensive medications, and specialized diagnostic
+                                tests.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Donate for Healthcare</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Nikah Assistance -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Social Welfare
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Nikah</span>
+                                <span class="line2">Assistance</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Dignified financial contribution towards
+                                the marriage ceremonies of orphans and daughters from economically challenged families.
+                            </p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Give Sadqat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: One Time Medical Assistant -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Emergency Relief
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">One Time Medical</span>
+                                <span class="line2">Assistant</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Immediate, one-time relief funds for urgent
+                                medical emergencies and critical healthcare situations requiring instant attention.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Help in Emergency</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Constructional Assistance -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Shelter Support
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Constructional</span>
+                                <span class="line2">Assistance</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Assistance for repairing dilapidated homes
+                                or building modest shelters for families living in unstable conditions.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Donate for Shelter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7: Monthly School Fees -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Education
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Monthly</span>
+                                <span class="line2">School Fees</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Investing in the future by covering tuition
+                                fees and educational expenses for students from low-income backgrounds.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Sponsor a Student</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 8: Monthly Financial Assistance -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Sustenance Aid
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Monthly Financial</span>
+                                <span class="line2">Assistance</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Dedicated monthly stipends to ensure
+                                widowed and elderly individuals can live with dignity and security.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Provide Sustenance</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 9: Education and Training -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Empowerment
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Education and</span>
+                                <span class="line2">Training</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Empowering the youth through vocational
+                                training, skill development, and career counseling for sustainable growth.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Support Training</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 10: Livelihood and Empowerment -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Self Reliance
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Livelihood and</span>
+                                <span class="line2">Empowerment</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Providing tools, equipment, or small grants
+                                to help individuals start their own small businesses and become self-reliant.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Empower Someone</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 11: Disaster Management -->
+                <div class="swiper-slide hero-service-slide">
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-badge" data-swiper-parallax="-300">
+                                <span class="hero-badge-dot"></span>
+                                Rapid Response
+                            </div>
+                            <h1 class="hero-title" data-swiper-parallax="-400">
+                                <span class="line1">Disaster</span>
+                                <span class="line2">Management</span>
+                            </h1>
+                            <p class="hero-desc" data-swiper-parallax="-600">Rapid response team providing food,
+                                shelter, and medical aid during floods, earthquakes, or other regional emergencies.</p>
+                            <div class="hero-btns" data-swiper-parallax="-700">
+                                <a href="#donate" class="btn btn-gold">Donate for Relief</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
+
         <img src="assets/img/logo.png" alt="ZANT Decorative" class="hero-image">
+
+        <a href="#about" class="scroll-down" aria-label="Scroll to About Section">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+            </div>
+        </a>
     </section>
 
     <!-- About Section -->
@@ -308,6 +551,62 @@
     <section id="trustees" class="section">
         <div class="container">
             <div class="trustees-header reveal">
+                <span class="section-tag">Leadership</span>
+                <h2 class="section-title">Message from <span>Trustees</span></h2>
+                <p class="section-sub">Words of commitment and vision from the dedicated individuals overseeing our
+                    trust's mission.</p>
+            </div>
+
+            <!-- Leadership Messages -->
+            <div class="leadership-container">
+                <!-- Dr. Sheikh Irfan Ahmed -->
+                <div class="leadership-card glass-card reveal">
+                    <div class="leadership-image">
+                        <img src="assets/trustee/irfan.jpeg" alt="Dr. Sheikh Irfan Ahmed">
+                        <div class="leadership-badge">General Secretary</div>
+                    </div>
+                    <div class="leadership-content">
+                        <div class="leadership-quote">“</div>
+                        <p class="leadership-text">As General Secretary, I am honored to affirm that ZANT is a purely
+                            charitable organization dedicated to serving the poor and needy on humanitarian grounds. Our
+                            mission is to uplift underprivileged communities through timely assistance delivered with
+                            compassion and dignity. We endeavor to reach those who are often overlooked, extending
+                            meaningful support that contributes to improving their quality of life.<br><br>ZANT upholds
+                            the highest standards of transparency and accountability, ensuring that all funds raised
+                            from the public are utilized judiciously and strictly for their intended purposes. Guided by
+                            a sincere spirit of service, we remain steadfast in our commitment to fostering hope and
+                            creating positive, sustainable change.<br><br>We deeply appreciate the continued trust and
+                            support of our donors and well-wishers in this noble endeavor.</p>
+                        <div class="leadership-meta">
+                            <h3 class="leadership-name">Dr. Sheikh Irfan Ahmed</h3>
+                            <span class="leadership-title">General Secretary, ZANT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showkat Ahmad Khan -->
+                <div class="leadership-card glass-card leadership-alt reveal">
+                    <div class="leadership-image">
+                        <img src="assets/trustee/showkat.jpeg" alt="Showkat Ahmad Khan">
+                        <div class="leadership-badge">Trustee</div>
+                    </div>
+                    <div class="leadership-content">
+                        <div class="leadership-quote">“</div>
+                        <p class="leadership-text"><strong>Assalam-u-Alaikum</strong><br><br>Zu-Al-Noorain Trust Narwara
+                            was founded by a group of young people from the core of downtown area of srinagar kashmir.
+                            The said trust has become a hope for the needy and the downtrodden people of Srinagar city.
+                            The trust believes in serving people without making any distinction on the bases of cast,
+                            colour, creed etc. As the book of Allah says that help eachother in righteousness and piety.
+                        </p>
+                        <div class="leadership-meta">
+                            <h3 class="leadership-name">Showkat Ahmad Khan</h3>
+                            <span class="leadership-title">Trustee, ZANT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trustees-header reveal" style="margin-top: 80px;">
                 <span class="section-tag">Management</span>
                 <h2 class="section-title">Our <span>Trustees</span></h2>
                 <p class="section-sub">The dedicated individuals who oversee the operations and ensure the integrity of
@@ -320,7 +619,7 @@
                     <div class="trustee-info">
                         <span class="trustee-num">Trustee 01</span>
                         <h3 class="trustee-name">Showkat Ahmad Khan</h3>
-                        <p class="trustee-parent">s/o Mohammad Yousuf Khan</p>
+                        <p class="trustee-parent">S/o Mohammad Yousuf Khan</p>
                         <p class="trustee-address">R/O Narwara, Srinagar</p>
                     </div>
                 </div>
@@ -507,7 +806,8 @@
     <div class="toast" id="toast">UPI ID Copied to Clipboard!</div>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js?v=1.0.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js?v=1.1.3"></script>
 </body>
 
 </html>

@@ -180,3 +180,26 @@ if (waBubble && waChatWindow && waInput && waSendBtn) {
 /* ── YEAR ── */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ── HERO SWIPER ── */
+const heroSwiper = new Swiper('.hero-swiper', {
+  slidesPerView: 1,
+  loop: true,
+  speed: 1200,
+  parallax: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  grabCursor: true,
+});
+
+
